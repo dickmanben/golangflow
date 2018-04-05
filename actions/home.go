@@ -70,6 +70,16 @@ func RSSFeed(c buffalo.Context) error {
 		}
 	}
 
+	// client, err := ga.NewClient("")
+	// if err != nil {
+	// 	errors.WithStack(err)
+	// }
+
+	// err = client.Send(ga.NewEvent("RSS", "Visited").Label("RSS"))
+	// if err != nil {
+	// 	errors.WithStack(err)
+	// }
+
 	return c.Render(200, r.Func("application/rss+xml", func(w io.Writer, d render.Data) error {
 		s, err := feed.ToRss()
 		if err != nil {
