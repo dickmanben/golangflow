@@ -61,11 +61,6 @@ func App() *buffalo.App {
 				return nil
 			}
 		})
-		
-		//Search
-		app.GET("/search", func(c buffalo.Context) error {
-			return c.Redirect(302, "/search")
-		})
 
 		// Protect against CSRF attacks. https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)
 		// Remove to disable this.
@@ -84,8 +79,8 @@ func App() *buffalo.App {
 
 		app.GET("/", HomeHandler)
 		app.GET("/rss", RSSFeed)
-		app.Middleware.Skip(Authorize, HomeHandler, RSSFeed)
-
+		app.GET("/search", Search)
+		app.Middleware.Skip(Authorize, HomeHandler, RSSFeed, Search)
 		app.ServeFiles("/assets", assetsBox)
 
 		auth := app.Group("/auth")
@@ -103,6 +98,8 @@ func App() *buffalo.App {
 		pr := PostsResource{&buffalo.BaseResource{}}
 		pg := app.Resource("/posts", pr)
 		pg.Middleware.Skip(Authorize, pr.Show)
+
+		indexPosts(app)
 	}
 
 	return app

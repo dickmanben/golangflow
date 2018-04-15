@@ -1,8 +1,7 @@
 package actions
 
-
 import (
-  "fmt"
+	"fmt"
 	"log"
 	"net/http/httptest"
 	"os"
@@ -33,7 +32,7 @@ func init() {
 	}
 }
 
-func indexDocs(app *buffalo.App) {
+func indexPosts(app *buffalo.App) {
 	hl := r.HTMLLayout
 	// set a blank layout until we finish indexing
 	r.HTMLLayout = ""
