@@ -61,6 +61,11 @@ func App() *buffalo.App {
 				return nil
 			}
 		})
+		
+		//Search
+		app.GET("/search", func(c buffalo.Context) error {
+			return c.Redirect(302, "/search")
+		})
 
 		// Protect against CSRF attacks. https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)
 		// Remove to disable this.
