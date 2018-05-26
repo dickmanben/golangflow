@@ -100,7 +100,10 @@ func indexPosts(app *buffalo.App) {
 	}
 }
 
+<<<<<<< HEAD
 // Search handler
+=======
+>>>>>>> 16ef2bcf8b2cd3c3b2a554d72c6f583b22d8aef5
 func Search(c buffalo.Context) error {
 	if c.Param("query") != "" {
 		query := bleve.NewQueryStringQuery(c.Param("query"))
@@ -115,5 +118,8 @@ func Search(c buffalo.Context) error {
 	}
 
 	return c.Render(200, r.HTML("search.html"))
+<<<<<<< HEAD
 
+=======
+>>>>>>> 16ef2bcf8b2cd3c3b2a554d72c6f583b22d8aef5
 }
