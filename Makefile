@@ -14,3 +14,6 @@ backup:
 	heroku pg:backups:capture --app golangflow
 pgdl:
 	heroku pg:backups:download --app golangflow
+debug:
+	buffalo build -t -gcflags="-N -l" -o bin/golangflow
+	dlv --listen=:2345 --headless=true --api-version=2 exec ./bin/golangflow
