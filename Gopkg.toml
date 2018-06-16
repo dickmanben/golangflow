@@ -20,70 +20,37 @@
 #  name = "github.com/x/y"
 #  version = "2.4.0"
 
-
 [[constraint]]
   name = "github.com/gobuffalo/buffalo"
-  version = "0.11.0"
+  version = "0.12.0"
 
 [[constraint]]
   name = "github.com/gobuffalo/envy"
-  version = "1.6.1"
+  version = "1.6.3"
 
 [[constraint]]
   name = "github.com/gobuffalo/packr"
-  version = "1.10.6"
-
-[[constraint]]
-  name = "github.com/gobuffalo/plush"
-  version = "3.6.7"
-
-[[constraint]]
-  branch = "master"
-  name = "github.com/gobuffalo/suite"
-
-[[constraint]]
-  name = "github.com/gobuffalo/tags"
-  version = "1.2.0"
-
-[[constraint]]
-  branch = "master"
-  name = "github.com/gorilla/feeds"
-
-[[constraint]]
-  name = "github.com/markbates/goth"
-  version = "1.42.0"
-
-[[constraint]]
-  branch = "master"
-  name = "github.com/markbates/grift"
+  version = "1.11.1"
 
 [[constraint]]
   name = "github.com/gobuffalo/pop"
-  version = "4.2.2"
+  version = "4.5.10"
 
 [[constraint]]
-  version = "v2.0.0"
-  name = "github.com/gobuffalo/validate"
+  name = "github.com/gobuffalo/suite"
+  version = "2.1.1"
 
 [[constraint]]
-  name = "github.com/pkg/errors"
-  version = "0.8.0"
+  name = "github.com/markbates/grift"
+  version = "1.0.0"
 
 [[constraint]]
-  name = "github.com/gobuffalo/uuid"
-  version = "v2.0.0"
-
-[[constraint]]
-  name = "github.com/stretchr/testify"
-  version = "1.1.4"
+  branch = "master"
+  name = "github.com/unrolled/secure"
 
 [[constraint]]
   branch = "master"
   name = "github.com/writeas/go-strip-markdown"
-
-[[constraint]]
-  name = "github.com/newrelic/go-agent"
-  version = "1.11.0"
 
 [[constraint]]
   branch = "master"
@@ -97,6 +64,7 @@
   branch = "master"
   name = "github.com/dghubble/go-twitter"
 
+# Mark's recommended pinnings
 [[constraint]]
-  name = "github.com/dghubble/oauth1"
-  version = "0.4.0"
+  name = "github.com/mattn/anko"
+  version = "v0.0.4"

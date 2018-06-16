@@ -8,6 +8,7 @@ import (
 	"github.com/bscott/golangflow/models"
 	"github.com/gobuffalo/buffalo"
 	"github.com/gobuffalo/buffalo/render"
+	"github.com/gobuffalo/buffalo/runtime"
 	"github.com/gobuffalo/pop"
 	"github.com/gorilla/feeds"
 	"github.com/pkg/errors"
@@ -33,6 +34,8 @@ func HomeHandler(c buffalo.Context) error {
 	// Make posts available inside the html template
 	c.Set("posts", posts)
 	c.Set("pagination", q.Paginator)
+	bi := runtime.Build()
+	c.Set("version", bi.Version)
 	return c.Render(200, r.HTML("index.html"))
 }
 
@@ -95,4 +98,5 @@ func JSONFeed(c buffalo.Context) error {
 //Privacy
 func Privacy(c buffalo.Context) error {
 	return c.Render(200, r.HTML("privacy.html"))
+
 }

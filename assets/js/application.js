@@ -1,6 +1,6 @@
 require("expose-loader?$!expose-loader?jQuery!jquery");
-require("bootstrap-sass/assets/javascripts/bootstrap.js");
-var marked = require("marked/lib/marked.js");
+require("bootstrap/dist/js/bootstrap.bundle.js");
+
 
 marked.setOptions({
   renderer: new marked.Renderer(),
